@@ -13,6 +13,19 @@ namespace ArrayRotation.Tests
             _arrayRotator = new OneByOneArrayRotator();
         }
 
+
+        [TestMethod]
+        public void RotateArrayLeftTestZeroTimes()
+        {
+            var inputArray = new[] { 1, 2, 3, 4, 5, 6, 7 };
+            var expectedResult = new[] { 1, 2, 3, 4, 5, 6, 7 };
+            var rotateNumber = 0;
+
+            var outputArray = _arrayRotator.RotateLeft(inputArray, rotateNumber);
+
+            CollectionAssert.AreEqual(outputArray, expectedResult);
+        }
+
         [TestMethod]
         public void RotateArrayLeftTest()
         {
@@ -33,6 +46,18 @@ namespace ArrayRotation.Tests
             var rotateNumber = 9;
 
             var outputArray = _arrayRotator.RotateLeft(inputArray, rotateNumber);
+
+            CollectionAssert.AreEqual(outputArray, expectedResult);
+        }
+
+        [TestMethod]
+        public void RotateArrayRightTestZeroTimes()
+        {
+            var inputArray = new[] { 1, 2, 3, 4, 5, 6, 7 };
+            var expectedResult = new[] { 1, 2, 3, 4, 5, 6, 7 };
+            var rotateNumber = 0;
+
+            var outputArray = _arrayRotator.RotateRight(inputArray, rotateNumber);
 
             CollectionAssert.AreEqual(outputArray, expectedResult);
         }
