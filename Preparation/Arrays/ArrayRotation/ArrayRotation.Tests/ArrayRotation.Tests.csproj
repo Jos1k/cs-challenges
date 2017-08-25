@@ -48,7 +48,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArrayRotatorTest.cs" />
+    <Compile Include="OneByOneArrayRotatorTest.cs" />
+    <Compile Include="TempArrayRotatorTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

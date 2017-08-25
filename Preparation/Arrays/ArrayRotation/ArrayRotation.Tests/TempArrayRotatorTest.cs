@@ -3,8 +3,16 @@
 namespace ArrayRotation.Tests
 {
     [TestClass]
-    public class ArrayRotatorTest
+    public class TempArrayRotatorTest
     {
+        private IArrayRotator _arrayRotator;
+
+        [TestInitialize]
+        public void Init()
+        {
+            _arrayRotator = new TempArrayRotator();
+        }
+
         [TestMethod]
         public void RotateArrayLeftTest()
         {
@@ -12,7 +20,7 @@ namespace ArrayRotation.Tests
             var expectedResult = new[] { 3, 4, 5, 6, 7, 1, 2 };
             var rotateNumber = 2;
 
-            var outputArray = ArrayRotator.RotateArrayLeft(inputArray, rotateNumber);
+            var outputArray = _arrayRotator.RotateLeft(inputArray, rotateNumber);
 
             CollectionAssert.AreEqual(outputArray, expectedResult);
         }
@@ -24,7 +32,7 @@ namespace ArrayRotation.Tests
             var expectedResult = new[] { 3, 4, 5, 6, 7, 1, 2 };
             var rotateNumber = 9;
 
-            var outputArray = ArrayRotator.RotateArrayLeft(inputArray, rotateNumber);
+            var outputArray = _arrayRotator.RotateLeft(inputArray, rotateNumber);
 
             CollectionAssert.AreEqual(outputArray, expectedResult);
         }
@@ -36,7 +44,7 @@ namespace ArrayRotation.Tests
             var expectedResult = new[] { 6, 7, 1, 2, 3, 4, 5 };
             var rotateNumber = 2;
 
-            var outputArray = ArrayRotator.RotateArrayRight(inputArray, rotateNumber);
+            var outputArray = _arrayRotator.RotateRight(inputArray, rotateNumber);
 
             CollectionAssert.AreEqual(outputArray, expectedResult);
         }
@@ -48,7 +56,7 @@ namespace ArrayRotation.Tests
             var expectedResult = new[] { 6, 7, 1, 2, 3, 4, 5 };
             var rotateNumber = 9;
 
-            var outputArray = ArrayRotator.RotateArrayRight(inputArray, rotateNumber);
+            var outputArray = _arrayRotator.RotateRight(inputArray, rotateNumber);
 
             CollectionAssert.AreEqual(outputArray, expectedResult);
         }
