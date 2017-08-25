@@ -14,6 +14,12 @@ namespace PrimeNumbersCheck
             var is11Prime = IsNumberPrime(43);
             var is15Prime = IsNumberPrime(47);
             var is29Prime = IsNumberPrime(97);
+
+
+            var getSmallestDividerWithReminders = GetSmallestDividerWithReminders(new[] { 2, 3, 7 }, new[] { 1, 2, 3 });
+            var getSmallestDividerWithReminders2 = GetSmallestDividerWithReminders(new[] { 2, 4, 8 }, new[] { 1, 1, 0 });
+
+
             Console.ReadKey();
         }
 
@@ -31,6 +37,16 @@ namespace PrimeNumbersCheck
                 factor += 6;
             }
             return true;
+        }
+
+        public static int GetSmallestDividerWithReminders(int[] dividers, int[] remainders)
+        {
+            int prevDivider = 1;
+
+            for (int i = dividers.Length - 1; i >= 0; i--)
+                prevDivider = dividers[i] * prevDivider + remainders[i];
+
+            return prevDivider;
         }
     }
 }
