@@ -22,6 +22,10 @@ namespace CommonDivisorMultiplier {
 		}
 
 		public int GetLCM( int a, int b ) {
+			if( a == 0 || b == 0 ) {
+				throw new ArgumentOutOfRangeException( "Values could not be zero!" );
+			}
+
 			return Math.Abs( a ) / GetCGD( a, b ) * Math.Abs( b );
 		}
 	}
