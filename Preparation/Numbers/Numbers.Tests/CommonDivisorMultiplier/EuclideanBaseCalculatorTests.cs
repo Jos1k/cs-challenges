@@ -1,44 +1,43 @@
 ﻿using System;
 using CommonDivisorMultiplier;
 using NUnit.Framework;
-using NUnit.Framework.Constraints;
 namespace Numbers.Tests.CommonDivisorMultiplier {
 	
 	[TestFixture]
 	public class EuclideanBaseCalculatorTests {
 	
-		protected ICommonDivisorMultiplierCalculator _euclideanCalc;
+		private ICommonDivisorMultiplierCalculator _commonDivisorCalc;
 
 		[OneTimeSetUp]
 		public void SetUp() {
-			_euclideanCalc = new EuclideanBaseCalculator();
+			_commonDivisorCalc = new EuclideanBaseCalculator();
 		}
 		
-		[TestCaseSource("CommonGreaterDivisorCases")]
+		[TestCaseSource(nameof(CommonGreaterDivisorCases))]
 		public void GetCGD_Positive( int a, int b, int expectedResult) {
-			int actualResult = _euclideanCalc.GetCGD( a, b );
+			int actualResult = _commonDivisorCalc.GetCGD( a, b );
 			Assert.AreEqual( expectedResult, actualResult );
 		}
 
 		[Test]
 		public void GetCGD_ZeroValues( ) {
 			int a = 0, b = 1;
-			Assert.Throws<ArgumentOutOfRangeException>( () => _euclideanCalc.GetCGD( a, b ) );
+			Assert.Throws<ArgumentOutOfRangeException>( () => _commonDivisorCalc.GetCGD( a, b ) );
 		}
 
-		[TestCaseSource( "LowestCommonMultiplierCases" )]
+		[TestCaseSource( nameof(LowestCommonMultiplierCases) )]
 		public void GetLCM_Positive(int a, int b, int expectedResult) {
-			int actualResult = _euclideanCalc.GetLCM( a, b );
+			int actualResult = _commonDivisorCalc.GetLCM( a, b );
 			Assert.AreEqual( expectedResult, actualResult );
 		}
 
 		[Test]
 		public void GetLCM_ZeroValues() {
 			int a = 0, b = 1;
-			Assert.Throws<ArgumentOutOfRangeException>( () => _euclideanCalc.GetLCM( a, b ) );
+			Assert.Throws<ArgumentOutOfRangeException>( () => _commonDivisorCalc.GetLCM( a, b ) );
 		}
 
-		private static object[] LowestCommonMultiplierCases = {
+		private static readonly object[] LowestCommonMultiplierCases = {
 			new object[] { 65, 10, 130 },
 			new object[] { 70, 10, 70 },
 			new object[] { 34, 16, 272 },
@@ -49,7 +48,7 @@ namespace Numbers.Tests.CommonDivisorMultiplier {
 			new object[] { 4, 18, 36 },
 		};
 
-		private static object[] CommonGreaterDivisorCases = {
+		private static readonly object[] CommonGreaterDivisorCases = {
 			new object[] { 5, 10, 5 },
 			new object[] { 7, 3, 1 },
 			new object[] { 413, 89, 1 },

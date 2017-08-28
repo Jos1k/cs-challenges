@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PrimeNumbers {
+﻿namespace PrimeNumbers {
 	public class PrimeNumberChecker : IPrimeNumberChecker {
 		public bool Check( int number ) {
 			if( number <= 1 ) return false;

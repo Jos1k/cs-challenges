@@ -56,6 +56,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="CommonDivisorMultiplier\CommonDivisorBaseCalculatorTests.cs" />
     <Compile Include="CommonDivisorMultiplier\EuclideanBaseCalculatorTests.cs" />
     <Compile Include="PrimeNumbers\PrimeNumbersCalculatorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
