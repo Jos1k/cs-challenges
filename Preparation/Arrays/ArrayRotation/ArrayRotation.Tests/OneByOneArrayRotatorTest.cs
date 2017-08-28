@@ -1,20 +1,19 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-
+﻿using NUnit.Framework;
 namespace ArrayRotation.Tests
 {
-    [TestClass]
+    [TestFixture]
     public class OneByOneArrayRotatorTest
     {
         private IArrayRotator _arrayRotator;
 
-        [TestInitialize]
+        [OneTimeSetUp]
         public void Init()
         {
             _arrayRotator = new OneByOneArrayRotator();
         }
 
 
-        [TestMethod]
+        [Test]
         public void RotateArrayLeftTestZeroTimes()
         {
             var inputArray = new[] { 1, 2, 3, 4, 5, 6, 7 };
@@ -26,7 +25,7 @@ namespace ArrayRotation.Tests
             CollectionAssert.AreEqual(outputArray, expectedResult);
         }
 
-        [TestMethod]
+		[Test]
         public void RotateArrayLeftTest()
         {
             var inputArray = new [] { 1, 2, 3, 4, 5, 6, 7 };
@@ -38,7 +37,7 @@ namespace ArrayRotation.Tests
             CollectionAssert.AreEqual(outputArray, expectedResult);
         }
 
-        [TestMethod]
+		[Test]
         public void RotateArrayLeftFewFullTimesTest()
         {
             var inputArray = new[] { 1, 2, 3, 4, 5, 6, 7 };
@@ -50,7 +49,7 @@ namespace ArrayRotation.Tests
             CollectionAssert.AreEqual(outputArray, expectedResult);
         }
 
-        [TestMethod]
+		[Test]
         public void RotateArrayRightTestZeroTimes()
         {
             var inputArray = new[] { 1, 2, 3, 4, 5, 6, 7 };
@@ -62,7 +61,7 @@ namespace ArrayRotation.Tests
             CollectionAssert.AreEqual(outputArray, expectedResult);
         }
 
-        [TestMethod]
+		[Test]
         public void RotateArrayRightTest()
         {
             var inputArray = new[] { 1, 2, 3, 4, 5, 6, 7 };
@@ -74,7 +73,7 @@ namespace ArrayRotation.Tests
             CollectionAssert.AreEqual(outputArray, expectedResult);
         }
 
-        [TestMethod]
+		[Test]
         public void RotateArrayRightFewFullTimesTest()
         {
             var inputArray = new[] { 1, 2, 3, 4, 5, 6, 7 };

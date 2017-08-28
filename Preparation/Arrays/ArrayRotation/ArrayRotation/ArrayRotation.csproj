@@ -40,8 +40,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OneByOneArrayRotator.cs" />
-    <Compile Include="TempArrayRotator.cs" />
+    <Compile Include="Implementation\JuggingArrayRotator.cs" />
+    <Compile Include="Implementation\OneByOneArrayRotator.cs" />
+    <Compile Include="Implementation\TempArrayRotator.cs" />
     <Compile Include="IArrayRotator.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
