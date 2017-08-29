@@ -1,4 +1,4 @@
-﻿namespace ArrayRotation
+﻿namespace ArrayRotation.Implementation
 {
     public class OneByOneArrayRotator:IArrayRotator
     {

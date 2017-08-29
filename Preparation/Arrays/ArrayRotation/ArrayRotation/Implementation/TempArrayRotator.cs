@@ -1,6 +1,6 @@
 ﻿using System.Linq;
 
-namespace ArrayRotation
+namespace ArrayRotation.Implementation
 {
     public class TempArrayRotator:IArrayRotator
     {

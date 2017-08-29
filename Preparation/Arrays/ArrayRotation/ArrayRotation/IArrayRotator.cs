@@ -2,7 +2,7 @@
 {
     public interface IArrayRotator
     {
-        int[] RotateLeft(int[] inputArray, int rotateTimes);
+        int[] RotateLeft(int[] outputArray, int rotateTimes);
         int[] RotateRight(int[] inputArray, int rotateTimes);
     }
 }
