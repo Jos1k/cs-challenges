@@ -1,19 +1,19 @@
-﻿using ArrayRotation.Implementation;
+﻿using ArrayRotation;
+using ArrayRotation.Implementation;
+
 using NUnit.Framework;
 
-using CollectionAssert = NUnit.Framework.CollectionAssert;
-
-namespace ArrayRotation.Tests.ArrayRotation
+namespace Arrays.Tests.ArrayRotation
 {
 	[TestFixture]
-	public class OneByOneArrayRotatorTest
+	public class TempArrayRotatorTest
 	{
 	    private IArrayRotator _arrayRotator;
 
         [OneTimeSetUp]
-		public void Init()
+		public void Setup()
 		{
-		    _arrayRotator = new OneByOneArrayRotator();
+		    _arrayRotator = new TempArrayRotator();
 		}
 
 		[TestCaseSource(nameof(RotateLeftPositiveTestCases))]

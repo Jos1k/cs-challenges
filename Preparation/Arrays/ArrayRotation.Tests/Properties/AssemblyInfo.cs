@@ -2,11 +2,11 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("ArrayRotation.Tests")]
+[assembly: AssemblyTitle("Arrays.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("EPAM Systems")]
-[assembly: AssemblyProduct("ArrayRotation.Tests")]
+[assembly: AssemblyProduct("Arrays.Tests")]
 [assembly: AssemblyCopyright("Copyright © EPAM Systems 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

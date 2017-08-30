@@ -7,9 +7,9 @@
     <ProjectGuid>{03A76656-6B99-4D22-9C76-C84DC0BB274E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ArrayRotation.Tests</RootNamespace>
-    <AssemblyName>ArrayRotation.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <RootNamespace>Arrays.Tests</RootNamespace>
+    <AssemblyName>Arrays.Tests</AssemblyName>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">15.0</VisualStudioVersion>
@@ -19,6 +19,7 @@
     <TestProjectType>UnitTest</TestProjectType>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -51,6 +52,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArrayReverse\ArrayReverseManagerRecursivelyTests.cs" />
+    <Compile Include="ArrayReverse\ArrayReverseManagerIterativeTests.cs" />
     <Compile Include="ArrayRotation\JuggingArrayRotatorTests.cs" />
     <Compile Include="ArrayRotation\OneByOneArrayRotatorTest.cs" />
     <Compile Include="ArrayRotation\TempArrayRotatorTest.cs" />
@@ -60,6 +63,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ArrayReverse\ArrayReverse.csproj">
+      <Project>{39ee2f1d-01d0-4c7e-8b69-c7e9eb4ccd36}</Project>
+      <Name>ArrayReverse</Name>
+    </ProjectReference>
     <ProjectReference Include="..\ArrayRotation\ArrayRotation.csproj">
       <Project>{292F3267-88BB-41B5-9505-7EAF18819ED4}</Project>
       <Name>ArrayRotation</Name>

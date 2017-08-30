@@ -1,9 +1,11 @@
-﻿using ArrayRotation.Implementation;
+﻿using ArrayRotation;
+using ArrayRotation.Implementation;
+
 using NUnit.Framework;
 
 using CollectionAssert = NUnit.Framework.CollectionAssert;
 
-namespace ArrayRotation.Tests.ArrayRotation
+namespace Arrays.Tests.ArrayRotation
 {
     [TestFixture]
     public class JuggingArrayRotatorTests
