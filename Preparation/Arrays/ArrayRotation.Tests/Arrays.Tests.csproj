@@ -57,6 +57,7 @@
     <Compile Include="ArrayRotation\JuggingArrayRotatorTests.cs" />
     <Compile Include="ArrayRotation\OneByOneArrayRotatorTest.cs" />
     <Compile Include="ArrayRotation\TempArrayRotatorTest.cs" />
+    <Compile Include="FIrstMinMaxElements\TempArrayFIrstMinMaxElementsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -70,6 +71,10 @@
     <ProjectReference Include="..\ArrayRotation\ArrayRotation.csproj">
       <Project>{292F3267-88BB-41B5-9505-7EAF18819ED4}</Project>
       <Name>ArrayRotation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FIrstMinMaxElements\FIrstMinMaxElements.csproj">
+      <Project>{a4d65593-3b4c-4d17-93ba-449ecd44c7c0}</Project>
+      <Name>FIrstMinMaxElements</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
